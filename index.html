@@ -33,8 +33,7 @@
              <tbody>
               {Object.keys(data).map((key)=>(
               <tr>
-               {data[key].map((e,index)=>(
-                <td>{e}</td>))}
+               <MakeTd td = {data[key]}/>
               </tr>))}
              </tbody>
             </table>
@@ -42,6 +41,15 @@
         )
        }
       }
+      
+   class MakeTd extends React.Component{
+     render(){
+      return(
+       {this.props.td.map((e)=>(
+         <td>{e}</td>))}
+       )
+      }
+     }
    
   
     ReactDOM.render(<MakeTable/>, document.getElementById('root'));
