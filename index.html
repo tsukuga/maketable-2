@@ -28,18 +28,20 @@
                     'c':["aaa","bbb","ccc","ddd","eee","fff","ggg"]};
       
     return (
-<React.Fragment>
-<table>
-<tbody>
-<tr>
-{(date[1]).map((e,index)=>(
-<td>{e[index]}</td>
-))}
-</tr>
-</tbody>
-</table>
-</React.Fragment>
-)
+            <React.Fragment>
+            <table>
+             <tbody>
+              {Object.keys(data).map((key)=>(
+              <tr>
+               {data[key].map((e,index)=>(
+                <td>{e}</td>))}
+              </tr>
+              ))}
+              ))}
+             </tbody>
+            </table>
+           </React.Fragment>
+     )
  
    }
   }
