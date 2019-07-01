@@ -33,7 +33,7 @@
              <tbody>
               {Object.keys(data).map((key)=>(
               <tr>
-               <MakeTd td = {data[key]}/>
+               <MakeTd td = {...data[key]}/>
               </tr>))}
              </tbody>
             </table>
@@ -45,7 +45,7 @@
    class MakeTd extends React.Component{
      render(){
       return(
-       {{this.props.td}.map((e)=>(
+       {props.td.map((e)=>(
          <td>{e}</td>))}
        )
       }
