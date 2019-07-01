@@ -45,8 +45,10 @@
    class MakeTd extends React.Component{
      render(){
       return(
-       {props.td.map((e)=>(
+       <React.Fragment>
+       {this.props.td.map((e)=>(
          <td>{e}</td>))}
+       </React.Fragment>
        )
       }
      }
